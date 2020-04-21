@@ -1,0 +1,5 @@
+---
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home/brosolved/public_html/dev/corona  # Add /<app_folder> if required
+        - /bin/cp -r * $DEPLOYPATH                #copy all from root -r "recursive include sub folder / files"           
