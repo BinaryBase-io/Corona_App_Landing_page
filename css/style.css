@@ -13,17 +13,44 @@ header,
     background-size: cover;
 }
 
-.navbar-brand{font-weight: 700;}
+.navbar-brand {
+    font-weight: 700;
+}
+
 .top-nav-collapse {
-    background-color: #ffffff;
-  }
-  @media (max-width: 768px) {
+    background: rgb(118, 94, 198);
+    background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+    background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
+}
+
+@media (max-width: 768px) {
     .navbar:not(.top-nav-collapse) {
-      background-color: #ffffff;
+        background: rgb(118, 94, 198);
+        background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
     }
-  }
-  @media (min-width: 800px) and (max-width: 850px) {
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
     .navbar:not(.top-nav-collapse) {
-      background-color: #ffffff;
+        background: rgb(118, 94, 198);
+        background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
     }
-  }
+}
+
+.navbar .nav-item .nav-link {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.back_img {}
