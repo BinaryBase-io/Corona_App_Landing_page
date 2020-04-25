@@ -7,13 +7,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--  Essential META Tags -->
-    <meta property="og:title" content="BinaryBase.io | Powered by Intellect, Driven by Values" />
+    <meta property="og:title" content="Covid-19 (BD) Android App" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="Powered by Intellect, Driven by Values" />
-    <meta name="twitter:title" content="BinaryBase.io | Powered by Intellect, Driven by Values" />
+    <meta name="twitter:title" content="Covid-19 (BD) Android App" />
     <meta name="twitter:domain" content="BinaryBase.io" />
     <!--  Non-Essential, But Recommended -->
-    <meta property="og:site_name" content="BinaryBase.io | Powered by Intellect, Driven by Values" />
+    <meta property="og:site_name" content="Covid-19 (BD) Android App" />
     <meta name="twitter:image:alt" content="BinaryBase.io" />
     <!--  Non-Essential, But Required for Analytics -->
     <meta property="fb:app_id" content="2171119279848445" />
@@ -22,10 +22,10 @@
 
     <meta property="og:url" , content="http://www.binarybase.io" />
     <meta property="og:image" , content="http://www.binarybase.io/assets/social_logo.png" />
-    <meta name="description" , content="description" />
+    <meta name="description" , content="Binarybase always delivers value to all clients and will also deliver top results through market winning custom strategies. We provide great results" />
     <meta property="og:description" , content="Binarybase always delivers value to all clients and will also deliver top results through market winning custom strategies. We provide great results" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Codiv-19 (BD) Application</title>
+    <title>Covid-19 (BD) Android App</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Google Fonts Roboto -->
@@ -145,7 +145,7 @@
                     <div class="col-md-3 mb-5">
                         <div class="confirm-case btn-outline-cyan">
                             <h4 class="my-4 font-weight-bold">Last 24 Hours</h4>
-                            <h1>503</h1>
+                            <h1 id="last_24_hour_infected">0</h1>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -153,7 +153,7 @@
                     <div class="col-md-3 mb-5">
                         <div class="confirm-case btn-outline-indigo">
                             <h4 class="my-4 font-weight-bold">Total Confirmed</h4>
-                            <h1>4689</h1>
+                            <h1 id="total_infected">0</h1>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -161,7 +161,7 @@
                     <div class="col-md-3 mb-5">
                         <div class="confirm-case btn-outline-success">
                             <h4 class="my-4 font-weight-bold">Total Recovered</h4>
-                            <h1>112</h1>
+                            <h1 id="total_recover">0</h1>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -169,7 +169,7 @@
                     <div class="col-md-3 mb-5">
                         <div class="confirm-case btn-outline-danger">
                             <h4 class="my-4 font-weight-bold">Total Deaths</h4>
-                            <h1>131</h1>
+                            <h1 id="total_death">0</h1>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -188,7 +188,7 @@
                     <div class="col-md-4 mb-5">
                         <div class="confirm-case btn-outline-indigo">
                             <h4 class="my-4 font-weight-bold">Confirmed</h4>
-                            <h1>2783512</h1>
+                            <h1 id="world_total_infected">0</h1>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -196,7 +196,7 @@
                     <div class="col-md-4 mb-5">
                         <div class="confirm-case btn-outline-success">
                             <h4 class="my-4 font-weight-bold"> Recovered</h4>
-                            <h1>765914</h1>
+                            <h1 id="world_total_recover">0</h1>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -204,7 +204,7 @@
                     <div class="col-md-4 mb-5">
                         <div class="confirm-case btn-outline-danger">
                             <h4 class="my-4 font-weight-bold">Deaths</h4>
-                            <h1>195313</h1>
+                            <h1 id="world_total_death">0</h1>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -534,14 +534,32 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!--Google Maps-->
-    <script src="https://maps.google.com/maps/api/js"></script>
     <!-- Your custom scripts (optional) -->
     <!-- Carousel options -->
     <script>
         $('.carousel').carousel({
             interval: 3000,
         })
+		
+		
+		$( document ).ready(function() {
+			var url = "https://brosolved.com/covid19/public/api/status";
+			$.getJSON( url, {
+			format: "json"
+			})
+		  .done(function( data ) {
+			
+			document.getElementById("total_infected").innerHTML = data.statusBD[0].total_infected;
+			 $("#last_24_hour_infected").text(data.statusBD[0].last_24_hour_infected);
+			 $("#total_recover").text(data.statusBD[0].total_recover);
+			 $("#total_death").text(data.statusBD[0].total_death);
+			 $("#world_total_infected").text(data.statusBD[0].world_total_infected);
+			 $("#world_total_recover").text(data.statusBD[0].world_total_recover);
+			 $("#world_total_death").text(data.statusBD[0].world_total_death);
+		  });
+		});
+		
+		
     </script>
     <!-- Google Maps settings -->
 
