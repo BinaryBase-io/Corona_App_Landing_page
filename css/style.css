@@ -54,5 +54,41 @@ header,
 }
 
 .banner-content{margin-top: 100px;}
-.back-img{max-width: 350px;}
-.back-img img{width: 80%;}
+.back-img{max-width: 350px; position: relative;}
+
+.coronaimg {
+    clear: both;
+    position: absolute !important;
+    top: 0;
+    margin-top: 60%;
+    margin-left: 15%;
+    transform: translate(-50%,-100%);
+}
+.rotate{
+    animation: rotate 15s linear infinite; 
+  }
+  @keyframes rotate{
+      from{transform: rotate(0deg);}
+    to{ transform: rotate(360deg); }
+  }
+  
+.downlaod-btn{
+    background: #614dc7 none repeat scroll 0 0;
+    border: 0;
+    border-radius: 50px;
+    font-size: 14px;
+    height: 60px;
+    letter-spacing: 3px;
+    padding: 12px 50px;
+    right: 10px;
+    text-transform: uppercase;
+    top: 10px;
+    transition: all .3s ease 0s; color: #ffffff;
+}
+.downlaod-btn:hover{    background: #fff none repeat scroll 0 0;
+    color: #614dc7;}
+
+.confirm-case{color: black;}
+.carousel-item{max-width: 250px;}
+#gallery{background: #f0f1ff;}
+.app-details{margin-top: 20%;}
