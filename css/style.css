@@ -25,26 +25,6 @@ header,
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
 }
 
-@media (max-width: 768px) {
-    .navbar:not(.top-nav-collapse) {
-        background: rgb(118, 94, 198);
-        background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
-        background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
-        background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
-    }
-}
-
-@media (min-width: 800px) and (max-width: 850px) {
-    .navbar:not(.top-nav-collapse) {
-        background: rgb(118, 94, 198);
-        background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
-        background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
-        background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
-    }
-}
-
 .navbar .nav-item .nav-link {
     display: block;
     font-size: 16px;
@@ -53,8 +33,18 @@ header,
     text-transform: uppercase;
 }
 
-.banner-content{margin-top: 100px;}
-.back-img{max-width: 350px; position: relative;}
+.banner-content {
+    margin-top: 100px;
+}
+
+.back-img {
+    max-width: 350px;
+    position: relative;
+}
+
+.phnimg {
+    width: 100%;
+}
 
 .coronaimg {
     clear: both;
@@ -62,17 +52,23 @@ header,
     top: 0;
     margin-top: 60%;
     margin-left: 15%;
-    transform: translate(-50%,-100%);
+    transform: translate(-50%, -100%);
 }
-.rotate{
-    animation: rotate 15s linear infinite; 
-  }
-  @keyframes rotate{
-      from{transform: rotate(0deg);}
-    to{ transform: rotate(360deg); }
-  }
-  
-.downlaod-btn{
+
+.rotate {
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.downlaod-btn {
     background: #614dc7 none repeat scroll 0 0;
     border: 0;
     border-radius: 50px;
@@ -83,12 +79,157 @@ header,
     right: 10px;
     text-transform: uppercase;
     top: 10px;
-    transition: all .3s ease 0s; color: #ffffff;
+    transition: all .3s ease 0s;
+    color: #ffffff;
 }
-.downlaod-btn:hover{    background: #fff none repeat scroll 0 0;
-    color: #614dc7;}
 
-.confirm-case{color: black;}
-.carousel-item{max-width: 250px;}
-#gallery{background: #f0f1ff;}
-.app-details{margin-top: 20%;}
+.downlaod-btn:hover {
+    background: #fff none repeat scroll 0 0;
+    color: #614dc7;
+}
+
+.confirm-case {
+    color: black;
+}
+
+.carousel-item {
+    max-width: 250px;
+}
+
+#gallery {
+    background: #f0f1ff;
+}
+
+.app-details {
+    margin-top: 20%;
+}
+
+.card-body>ol>li {
+    margin: 10px 0;
+}
+
+.install-tag {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card {
+    font-weight: 400;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #000000;
+}
+
+.testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.indigo.lighten-1 {
+    background: rgb(118, 94, 198);
+    background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+    background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
+}
+
+.testimonial-card .avatar {
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.testimonial-card .avatar img {
+    width: 100%;
+}
+
+.testimonial-card .card-body {
+    text-align: center;
+}
+
+.avatar p {
+    margin-left: 20px;
+    margin-top: 10px;
+    color: gray;
+}
+
+.gra-color {
+    color: #614dc7 !important;
+    text-decoration: none;
+}
+
+.text-black {
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: rgb(118, 94, 198);
+        background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
+    }
+    .app-details {
+        margin-top: 00%;
+    }
+    .coronaimg {
+        clear: both;
+        position: absolute !important;
+        top: 0;
+        margin-top: 60%;
+        margin-left: 10%;
+        transform: translate(-50%, -100%);
+        width: 80%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1023px) {
+    .navbar:not(.top-nav-collapse) {
+        background: rgb(118, 94, 198);
+        background: -moz-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        background: linear-gradient(90deg, rgba(118, 94, 198, 1) 0%, rgba(201, 146, 247, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#765ec6", endColorstr="#c992f7", GradientType=1);
+    }
+    .coronaimg {
+        clear: both;
+        position: absolute !important;
+        top: 0;
+        margin-top: 60%;
+        margin-left: 30%;
+        transform: translate(-50%, -100%);
+        width: 50%;
+    }
+    .phnimg {
+        width: 60%;
+        margin-top: 41%;
+        top: 0;
+        left: 25%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+    .coronaimg {
+        clear: both;
+        position: absolute !important;
+        top: 0;
+        margin-top: 60%;
+        margin-left: 30%;
+        transform: translate(-50%, -100%);
+        width: 50%;
+    }
+    .phnimg {
+        width: 60%;
+        margin-top: 25%;
+        top: 0;
+        left: 25%;
+        height: auto;
+    }
+}
