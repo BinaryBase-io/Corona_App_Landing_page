@@ -93,7 +93,7 @@
 					<h1>
 						Covid-19 (BD) <br> Informatin Hub
 					</h1>
-					<p id="description">The Sole purpose of this initiative is to create mass awareness about the novel coronavirus (2019-nCoV, widely known as Covid-19) outbreak in Bangladesh. The app is aslo designed to share information about the likely prevention of this recent pandemic. </a>.</p>
+					<p>The Sole purpose of this initiative is to create mass awareness about the novel coronavirus (2019-nCoV, widely known as Covid-19) outbreak in Bangladesh. The app is aslo designed to share information about the likely prevention of this recent pandemic. From social responsibility, this movile app is developed by <a href="https://binarybase.io"> BinaryBase.io</a>.</p>
 					<div class="download-button d-flex flex-row justify-content-start">
 						<div class="buttons flex-row d-flex">
 							<i class="fa fa-download" aria-hidden="true"></i>
@@ -399,18 +399,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		
 		$( document ).ready(function() {
 			var url = "https://brosolved.com/covid19/public/api/status";
-			var about = "https://brosolved.com/covid19/public/about.en.json";
-
-
-			$.getJSON( about, {
-			format: "json"
-			})
-		  .done(function( data ) {
-			
-			$("#description").text(data.about.description);
-		  });
-
-
 			$.getJSON( url, {
 			format: "json"
 			})
@@ -425,7 +413,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			 $("#world_total_death").text(data.statusBD[0].world_total_death);
 		  });
 		});
-		
 		
 		
     </script>
